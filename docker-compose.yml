@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    container_name: dev_patel_resume_web
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+      - DJANGO_SECRET_KEY=django-insecure-dev-patel-resume-portfolio-secret-key-change-in-prod

@@ -1,0 +1,392 @@
+/* ==========================================================================
+   Dev Nareshkumar Patel - Print / PDF Resume Stylesheet
+   Optimized for 1-2 Page Clean Executive & Technical Formatting
+   ========================================================================== */
+
+@page {
+    margin: 1.2cm 1.5cm;
+    size: letter portrait;
+}
+
+@media print {
+    /* Hide interactive & non-resume UI components */
+    .navbar-header,
+    .hero-badge,
+    .hero-actions,
+    .about-section,
+    .contact-form-card,
+    #contact,
+    .footer,
+    .btn,
+    .theme-toggle,
+    .toast-container,
+    .section-tag,
+    .copy-hint,
+    .project-card-footer {
+        display: none !important;
+    }
+
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+        font-size: 10.5pt !important;
+        line-height: 1.35 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Print Header (Dev Nareshkumar Patel) */
+    .hero-section {
+        padding: 0 0 10pt 0 !important;
+        border-bottom: 1.5pt solid #000000 !important;
+        margin-bottom: 12pt !important;
+        text-align: center !important;
+    }
+
+    .hero-title {
+        font-size: 20pt !important;
+        font-weight: bold !important;
+        color: #000000 !important;
+        margin-bottom: 4pt !important;
+    }
+
+    .gradient-text {
+        color: #000000 !important;
+        -webkit-text-fill-color: initial !important;
+        background: none !important;
+    }
+
+    .hero-subtitle {
+        display: none !important;
+    }
+
+    .hero-headline {
+        display: none !important;
+    }
+
+    .hero-meta-bar {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 12pt !important;
+        font-size: 9.5pt !important;
+        color: #333333 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .meta-item {
+        color: #000000 !important;
+        text-decoration: none !important;
+    }
+
+    .meta-icon {
+        display: none !important;
+    }
+
+    /* Sections */
+    .section {
+        padding: 0 0 10pt 0 !important;
+        background: none !important;
+    }
+
+    .section-header {
+        margin-bottom: 6pt !important;
+        text-align: left !important;
+        border-bottom: 1pt solid #444444 !important;
+        padding-bottom: 2pt !important;
+    }
+
+    .section-title {
+        font-size: 12pt !important;
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+        margin-bottom: 0 !important;
+        color: #000000 !important;
+    }
+
+    .section-subtitle {
+        display: none !important;
+    }
+
+    /* Education */
+    .education-grid {
+        display: block !important;
+    }
+
+    .education-card {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 0 6pt 0 !important;
+        margin-bottom: 6pt !important;
+    }
+
+    .edu-top {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: baseline !important;
+        margin-bottom: 2pt !important;
+    }
+
+    .edu-degree {
+        font-size: 10.5pt !important;
+        font-weight: bold !important;
+        display: inline !important;
+    }
+
+    .edu-institution {
+        font-size: 10pt !important;
+        font-style: italic !important;
+        display: inline !important;
+        color: #222222 !important;
+        margin-left: 5pt !important;
+    }
+
+    .edu-location {
+        font-size: 9pt !important;
+        color: #555555 !important;
+        margin-left: 5pt !important;
+    }
+
+    .badge-date {
+        background: none !important;
+        border: none !important;
+        font-size: 9.5pt !important;
+        font-weight: 600 !important;
+        color: #000000 !important;
+        padding: 0 !important;
+    }
+
+    .coursework-label {
+        font-size: 9pt !important;
+        font-weight: 600 !important;
+        margin-bottom: 2pt !important;
+    }
+
+    .course-tags {
+        display: inline !important;
+    }
+
+    .course-tag {
+        display: inline !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 9pt !important;
+        color: #333333 !important;
+    }
+
+    .course-tag:not(:last-child)::after {
+        content: ", ";
+    }
+
+    /* Skills */
+    .skills-wrapper {
+        display: block !important;
+    }
+
+    .skill-category-card {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 0 4pt 0 !important;
+        margin-bottom: 4pt !important;
+    }
+
+    .category-header {
+        display: inline !important;
+        margin-bottom: 0 !important;
+    }
+
+    .category-icon-box {
+        display: none !important;
+    }
+
+    .category-title {
+        font-size: 10pt !important;
+        font-weight: bold !important;
+        display: inline !important;
+    }
+
+    .category-title::after {
+        content: ": ";
+    }
+
+    .skill-tags {
+        display: inline !important;
+    }
+
+    .skill-tag {
+        display: inline !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 9.5pt !important;
+        color: #222222 !important;
+    }
+
+    .skill-tag:not(:last-child)::after {
+        content: ", ";
+    }
+
+    .cert-grid {
+        display: inline !important;
+    }
+
+    .cert-badge {
+        display: inline !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 9.5pt !important;
+    }
+
+    .cert-badge:not(:last-child)::after {
+        content: "; ";
+    }
+
+    .cert-check {
+        display: none !important;
+    }
+
+    /* Experience */
+    .timeline {
+        padding-left: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .timeline::before,
+    .timeline-dot {
+        display: none !important;
+    }
+
+    .timeline-item {
+        margin-bottom: 8pt !important;
+    }
+
+    .timeline-card {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+
+    .timeline-meta {
+        display: flex !important;
+        justify-content: space-between !important;
+        margin-bottom: 3pt !important;
+    }
+
+    .timeline-role {
+        font-size: 10.5pt !important;
+        font-weight: bold !important;
+        display: inline !important;
+    }
+
+    .timeline-company {
+        display: inline !important;
+        font-size: 10pt !important;
+        font-style: italic !important;
+        color: #222222 !important;
+        margin-left: 5pt !important;
+    }
+
+    .badge-current {
+        background: none !important;
+        border: none !important;
+        color: #000000 !important;
+        font-size: 9.5pt !important;
+        font-weight: 600 !important;
+        padding: 0 !important;
+    }
+
+    .timeline-bullets {
+        padding-left: 14pt !important;
+        margin-bottom: 0 !important;
+    }
+
+    .timeline-bullets li {
+        font-size: 9pt !important;
+        color: #111111 !important;
+        margin-bottom: 2pt !important;
+    }
+
+    /* Projects */
+    .projects-grid {
+        display: block !important;
+    }
+
+    .project-card {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 0 8pt 0 !important;
+        margin-bottom: 8pt !important;
+        page-break-inside: avoid;
+    }
+
+    .project-number {
+        display: none !important;
+    }
+
+    .project-title {
+        font-size: 10.5pt !important;
+        font-weight: bold !important;
+        display: inline !important;
+    }
+
+    .project-tagline {
+        display: none !important;
+    }
+
+    .project-tech-list {
+        display: inline !important;
+        margin-left: 6pt !important;
+    }
+
+    .project-tech-list::before {
+        content: "| ";
+        font-weight: bold;
+    }
+
+    .badge-tech {
+        background: none !important;
+        border: none !important;
+        display: inline !important;
+        padding: 0 !important;
+        font-size: 9pt !important;
+        font-style: italic !important;
+        color: #444444 !important;
+    }
+
+    .badge-tech:not(:last-child)::after {
+        content: ", ";
+    }
+
+    .project-description {
+        display: none !important;
+    }
+
+    .project-bullets {
+        margin-top: 3pt !important;
+        margin-bottom: 0 !important;
+    }
+
+    .project-bullets ul {
+        padding-left: 14pt !important;
+    }
+
+    .project-bullets li {
+        font-size: 9pt !important;
+        color: #111111 !important;
+        margin-bottom: 2pt !important;
+    }
+}
