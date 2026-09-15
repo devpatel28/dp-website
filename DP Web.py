@@ -17,10 +17,25 @@ def run_command(command):
     return result
 
 
-def open_browser():
+import socket
+
+
+def find_available_port(start_port=8080, max_port=8999):
+    """Finds an available TCP port starting from start_port."""
+    for port in range(start_port, max_port + 1):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            sock.settimeout(0.5)
+            # If connect_ex returns non-zero, the port is free
+            if sock.connect_ex(('127.0.0.1', port)) != 0:
+                return port
+    return start_port
+
+
+def open_browser(port):
     time.sleep(1.5)
-    print("--> Opening browser to http://127.0.0.1:8000...")
-    webbrowser.open("http://127.0.0.1:8000")
+    url = f"http://127.0.0.1:{port}"
+    print(f"--> Opening browser to {url}...")
+    webbrowser.open(url)
 
 
 def main():
@@ -48,17 +63,22 @@ def main():
     print("[*] Ensuring resume data is populated...")
     subprocess.run([sys.executable, "manage.py", "seed_data"])
 
-    # Launch browser thread
-    threading.Thread(target=open_browser, daemon=True).start()
+    # Automatically find an available port to avoid conflicts
+    port = find_available_port(8080)
+    print(f"[+] Using local port: {port}")
 
-    # Start Django server
-    print("\n[+] Starting Django development server at http://127.0.0.1:8000")
+    # Launch browser thread
+    threading.Thread(target=open_browser, args=(port,), daemon=True).start()
+
+    # Start Django server on detected free port
+    print(f"\n[+] Starting Django development server at http://127.0.0.1:{port}")
     print("[+] Press CTRL+C in this terminal to stop the server.\n")
     try:
-        subprocess.run([sys.executable, "manage.py", "runserver", "8000"])
+        subprocess.run([sys.executable, "manage.py", "runserver", str(port)])
     except KeyboardInterrupt:
         print("\n[*] Server stopped.")
 
 
 if __name__ == '__main__':
     main()
+

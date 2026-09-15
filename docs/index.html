@@ -1,0 +1,767 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dev Nareshkumar Patel - Junior Software Developer Portfolio & Interactive Resume. Computer Science student, Python developer, IoT and full-stack engineer.">
+    <meta name="author" content="Dev Nareshkumar Patel">
+    <title>Dev Nareshkumar Patel | Junior Software Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Main Style -->
+    <link rel="stylesheet" href="./static/resume/css/style.css">
+    <!-- Print Style for Recruiters -->
+    <link rel="stylesheet" href="./static/resume/css/print.css" media="print">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar-header" id="header">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">
+                <span class="brand-bracket">&lt;</span><span class="brand-name">Dev Patel</span><span class="brand-bracket"> /&gt;</span>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn btn-outline btn-sm print-btn" onclick="window.print()" title="Print or Save Resume as PDF">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                        <rect x="6" y="14" width="12" height="8"></rect>
+                    </svg>
+                    <span>PDF Resume</span>
+                </button>
+
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+                    <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Open menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Alert Messages -->
+    
+
+    <!-- Main Content -->
+    <main>
+        
+<!-- Hero Section -->
+<section class="hero-section" id="hero">
+    <div class="container hero-container">
+        <div class="hero-badge">
+            <span class="status-dot"></span>
+            <span>Open to Junior Software Developer &amp; Co-op Roles</span>
+        </div>
+
+        <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Dev Nareshkumar Patel</span>
+        </h1>
+        <h2 class="hero-subtitle">Junior Software Developer</h2>
+        <p class="hero-headline">Computer Science student passionate about Python, full-stack web development, and IoT engineering.</p>
+
+        <!-- Quick Contacts Bar -->
+        <div class="hero-meta-bar">
+            <a href="mailto:dnhp281999@gmail.com" class="meta-item">
+                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>dnhp281999@gmail.com</span>
+            </a>
+            <a href="tel:+1 (416) 721-0524" class="meta-item">
+                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>+1 (416) 721-0524</span>
+            </a>
+            <span class="meta-item">
+                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Ontario, Canada</span>
+            </span>
+        </div>
+
+        <!-- Call to Actions -->
+        <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                Get In Touch
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+                View Projects
+            </a>
+            <a href="https://github.com/devpatel28" target="_blank" rel="noopener" class="btn btn-outline">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                GitHub Profile
+            </a>
+            <a href="https://linkedin.com/in/dev-n-patel-2aug1999/" target="_blank" rel="noopener" class="btn btn-outline">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                LinkedIn
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Profile Overview</span>
+            <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-card about-narrative">
+                <p class="about-text">Aspiring Junior Software Developer pursuing a Bachelor of Computer Science at Trent University with a technical foundation in Electronics Engineering from Seneca College. Proven hands-on experience in software deployment, IoT automation, and real-time web applications using Python, Django, React, and Docker. Driven by solving practical engineering problems and shipping clean, maintainable code.</p>
+                <div class="about-stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">Years Technical Experience</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Enterprise Deployments</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">End-to-End Projects</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Commitment to Growth</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-card about-highlights">
+                <h3 class="highlight-title">Key Competencies</h3>
+                <ul class="highlight-list">
+                    <li>
+                        <span class="highlight-icon">⚡</span>
+                        <div>
+                            <strong>Full-Stack & Systems Engineering:</strong> Strong acumen building web applications (Django, React, Node.js) combined with low-level IoT programming (Python, C, Arduino, Raspberry Pi).
+                        </div>
+                    </li>
+                    <li>
+                        <span class="highlight-icon">🚀</span>
+                        <div>
+                            <strong>Proven Deployment Track Record:</strong> Automated hardware provisioning for 45-50 client laptops at Compugen and resolved mission-critical IT infrastructure issues.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="highlight-icon">🧠</span>
+                        <div>
+                            <strong>Strong Academic Foundation:</strong> Advanced Computer Science coursework in AI, LLMs & NLP, Data Structures & Algorithms, and Distributed Systems at Trent University.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="highlight-icon">🛠️</span>
+                        <div>
+                            <strong>Modern Tooling:</strong> Containerization with Docker, Git version control, RESTful APIs, and CI/CD development practices.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="section section-alt" id="skills">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Technical Competencies</span>
+            <h2 class="section-title">Skills & Technologies</h2>
+        </div>
+
+        <div class="skills-wrapper">
+            <!-- Web Development -->
+            <div class="skill-category-card">
+                <div class="category-header">
+                    <div class="category-icon-box">🌐</div>
+                    <h3 class="category-title">Web Development</h3>
+                </div>
+                <div class="skill-tags">
+                    
+                    <span class="skill-tag skill-web">HTML5 &amp; CSS3</span>
+                    
+                    <span class="skill-tag skill-web">JavaScript (ES6+)</span>
+                    
+                    <span class="skill-tag skill-web">React.js</span>
+                    
+                    <span class="skill-tag skill-web">Django</span>
+                    
+                    <span class="skill-tag skill-web">Node.js</span>
+                    
+                </div>
+            </div>
+
+            <!-- Programming Languages -->
+            <div class="skill-category-card">
+                <div class="category-header">
+                    <div class="category-icon-box">💻</div>
+                    <h3 class="category-title">Languages</h3>
+                </div>
+                <div class="skill-tags">
+                    
+                    <span class="skill-tag skill-lang">Python</span>
+                    
+                    <span class="skill-tag skill-lang">C</span>
+                    
+                    <span class="skill-tag skill-lang">C++</span>
+                    
+                    <span class="skill-tag skill-lang">Java</span>
+                    
+                    <span class="skill-tag skill-lang">SQL</span>
+                    
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="skill-category-card">
+                <div class="category-header">
+                    <div class="category-icon-box">🗄️</div>
+                    <h3 class="category-title">Databases</h3>
+                </div>
+                <div class="skill-tags">
+                    
+                    <span class="skill-tag skill-db">PostgreSQL</span>
+                    
+                    <span class="skill-tag skill-db">MySQL</span>
+                    
+                    <span class="skill-tag skill-db">SQLite</span>
+                    
+                </div>
+            </div>
+
+            <!-- Tools & DevOps -->
+            <div class="skill-category-card">
+                <div class="category-header">
+                    <div class="category-icon-box">⚙️</div>
+                    <h3 class="category-title">Tools & DevOps</h3>
+                </div>
+                <div class="skill-tags">
+                    
+                    <span class="skill-tag skill-devops">Git &amp; GitHub</span>
+                    
+                    <span class="skill-tag skill-devops">Docker</span>
+                    
+                    <span class="skill-tag skill-devops">Google Colab</span>
+                    
+                    <span class="skill-tag skill-devops">Linux / Bash</span>
+                    
+                    <span class="skill-tag skill-devops">VS Code</span>
+                    
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="skill-category-card skill-card-wide">
+                <div class="category-header">
+                    <div class="category-icon-box">🎓</div>
+                    <h3 class="category-title">Certifications & Specialized Training</h3>
+                </div>
+                <div class="cert-grid">
+                    
+                    <div class="cert-badge">
+                        <span class="cert-check">✓</span>
+                        <span class="cert-name">Complete Python Mastery (Code With Mosh)</span>
+                    </div>
+                    
+                    <div class="cert-badge">
+                        <span class="cert-check">✓</span>
+                        <span class="cert-name">Intro to Generative AI</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="section" id="projects">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Featured Work</span>
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">Real-world applications spanning embedded IoT telemetry, full-stack microservices, and containerized web systems.</p>
+        </div>
+
+        <div class="projects-grid">
+            
+            <article class="project-card">
+                <div class="project-card-header">
+                    <span class="project-number">01</span>
+                    <h3 class="project-title">Motion Detector</h3>
+                    
+                    <p class="project-tagline">Real-time IoT alert appliance using Raspberry Pi and LTE telemetry</p>
+                    
+                </div>
+
+                <div class="project-tech-list">
+                    
+                    <span class="badge badge-tech">Raspberry Pi</span>
+                    
+                    <span class="badge badge-tech">Python</span>
+                    
+                    <span class="badge badge-tech">PIR sensor</span>
+                    
+                    <span class="badge badge-tech">SMTP</span>
+                    
+                    <span class="badge badge-tech">TRM240 LTE</span>
+                    
+                </div>
+
+                <p class="project-description">An embedded IoT security application that detects movement in real time and automatically dispatches alert notifications over cellular network without relying on local Wi-Fi.</p>
+
+                <div class="project-bullets">
+                    <ul>
+                        
+                        <li>Developed a Python-based event listener to process PIR sensor interrupts and integrated SMTP libraries for automated alert dispatching within 5 minutes of detection.</li>
+                        
+                        <li>Connected the Raspberry Pi to the internet using a TRM240 LTE modem to establish an independent network connection, ensuring continuous real-time environment monitoring.</li>
+                        
+                    </ul>
+                </div>
+
+                <div class="project-card-footer">
+                    
+                    <a href="https://github.com/devpatel28" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        Source Code
+                    </a>
+                    
+                    
+                </div>
+            </article>
+            
+            <article class="project-card">
+                <div class="project-card-header">
+                    <span class="project-number">02</span>
+                    <h3 class="project-title">Temperature-Controlled Home Automation</h3>
+                    
+                    <p class="project-tagline">Full-stack smart climate control with real-time multi-user WebSocket sync</p>
+                    
+                </div>
+
+                <div class="project-tech-list">
+                    
+                    <span class="badge badge-tech">Arduino</span>
+                    
+                    <span class="badge badge-tech">React.js</span>
+                    
+                    <span class="badge badge-tech">Node.js</span>
+                    
+                    <span class="badge badge-tech">WebSockets</span>
+                    
+                    <span class="badge badge-tech">Digital Thermometer</span>
+                    
+                </div>
+
+                <p class="project-description">A smart home automation prototype featuring an Arduino hardware controller and a responsive mobile web interface with synchronized real-time sensor streaming.</p>
+
+                <div class="project-bullets">
+                    <ul>
+                        
+                        <li>Architected an Arduino-based system with a React.js/Node.js mobile interface, implementing a real-time data pipeline to synchronize temperature states across multiple concurrent users via WebSocket.</li>
+                        
+                        <li>Engineered automated control logic to process ambient data from a digital thermometer, bypassing manual inputs to maintain precise climate conditions.</li>
+                        
+                    </ul>
+                </div>
+
+                <div class="project-card-footer">
+                    
+                    <a href="https://github.com/devpatel28" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        Source Code
+                    </a>
+                    
+                    
+                </div>
+            </article>
+            
+            <article class="project-card">
+                <div class="project-card-header">
+                    <span class="project-number">03</span>
+                    <h3 class="project-title">Developer Resume &amp; Portfolio Web Platform</h3>
+                    
+                    <p class="project-tagline">Dynamic, containerized full-stack web application built with Django &amp; Docker</p>
+                    
+                </div>
+
+                <div class="project-tech-list">
+                    
+                    <span class="badge badge-tech">Python</span>
+                    
+                    <span class="badge badge-tech">Django</span>
+                    
+                    <span class="badge badge-tech">Docker</span>
+                    
+                    <span class="badge badge-tech">PostgreSQL/SQLite</span>
+                    
+                    <span class="badge badge-tech">HTML5</span>
+                    
+                    <span class="badge badge-tech">CSS3</span>
+                    
+                    <span class="badge badge-tech">JavaScript</span>
+                    
+                </div>
+
+                <p class="project-description">A professional developer portfolio and interactive resume platform engineered with Django MVC architecture, featuring database-driven content management, contact processing, and Docker containerization.</p>
+
+                <div class="project-bullets">
+                    <ul>
+                        
+                        <li>Engineered relational database models for skills, projects, and work history, manageable directly through an authenticated Django Admin panel.</li>
+                        
+                        <li>Designed a responsive, modern frontend featuring dark/light theme persistence, recruiter-friendly print/PDF export, and CSRF-protected contact forms.</li>
+                        
+                        <li>Containerized the application with Docker and Docker Compose for production-grade reliability and reproducible developer setup.</li>
+                        
+                    </ul>
+                </div>
+
+                <div class="project-card-footer">
+                    
+                    <a href="https://github.com/devpatel28" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        Source Code
+                    </a>
+                    
+                    
+                </div>
+            </article>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section class="section section-alt" id="experience">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Career History</span>
+            <h2 class="section-title">Work Experience</h2>
+        </div>
+
+        <div class="timeline">
+            
+            <div class="timeline-item">
+                <div class="timeline-dot dot-active"></div>
+                <div class="timeline-card">
+                    <div class="timeline-meta">
+                        <div class="timeline-role-box">
+                            <h3 class="timeline-role">Deployment Tech</h3>
+                            <span class="timeline-company">Compugen &bull; GTA, Canada</span>
+                        </div>
+                        <span class="badge badge-current">
+                            Jan 2024 – Current
+                        </span>
+                    </div>
+
+                    <ul class="timeline-bullets">
+                        
+                        <li>Automated the configuration of 45 to 50 client laptops using deployment scripts and executed the on-site setup for Hamilton Health Sciences, resulting in seamless hardware transitions across departments.</li>
+                        
+                        <li>Installed 12 complete Point of Sale (POS) and payment systems daily for The Beer Store, integrating all necessary hardware to ensure retail locations were immediately operational.</li>
+                        
+                        <li>Resolved 5 critical hardware/software issues for Canadian Bank Note by diagnosing network protocol and registry conflicts, ensuring zero downtime for secure printing operations.</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot "></div>
+                <div class="timeline-card">
+                    <div class="timeline-meta">
+                        <div class="timeline-role-box">
+                            <h3 class="timeline-role">Smart-Home Security Technician</h3>
+                            <span class="timeline-company">Telus &bull; GTA, Canada</span>
+                        </div>
+                        <span class="badge badge-date">
+                            Jan 2023 – May 2023
+                        </span>
+                    </div>
+
+                    <ul class="timeline-bullets">
+                        
+                        <li>Diagnosed and resolved complex hardware and software failures for smart-home security systems within 30-45 minute windows, leveraging systematic troubleshooting procedures to isolate network vulnerabilities.</li>
+                        
+                        <li>Debugged device connectivity issues across 1 to 3 residential properties daily, ensuring reliable system integration and sustained operational readiness for end-users.</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section class="section" id="education">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Academic Background</span>
+            <h2 class="section-title">Education</h2>
+        </div>
+
+        <div class="education-grid">
+            
+            <div class="education-card">
+                <div class="edu-top">
+                    <div>
+                        <h3 class="edu-degree">Bachelor of Computer Science</h3>
+                        <h4 class="edu-institution">Trent University</h4>
+                        <span class="edu-location">Ontario, Canada</span>
+                    </div>
+                    <span class="badge badge-date">Sep 2023 – Aug 2026</span>
+                </div>
+
+                <div class="edu-coursework">
+                    <h5 class="coursework-label">Relevant Coursework:</h5>
+                    <div class="course-tags">
+                        
+                        <span class="course-tag">Applied AI &amp; Machine Learning</span>
+                        
+                        <span class="course-tag">LLM &amp; Natural Language Processing</span>
+                        
+                        <span class="course-tag">Data Mining</span>
+                        
+                        <span class="course-tag">Data Structures &amp; Algorithms</span>
+                        
+                        <span class="course-tag">Software Design &amp; Modelling</span>
+                        
+                        <span class="course-tag">Systems Programming</span>
+                        
+                        <span class="course-tag">Database Management Systems</span>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="education-card">
+                <div class="edu-top">
+                    <div>
+                        <h3 class="edu-degree">Electronics Engineering Technician</h3>
+                        <h4 class="edu-institution">Seneca College</h4>
+                        <span class="edu-location">Ontario, Canada</span>
+                    </div>
+                    <span class="badge badge-date">Jan 2018 – Aug 2020</span>
+                </div>
+
+                <div class="edu-coursework">
+                    <h5 class="coursework-label">Relevant Coursework:</h5>
+                    <div class="course-tags">
+                        
+                        <span class="course-tag">Programming Using C</span>
+                        
+                        <span class="course-tag">Micro-controller Concepts</span>
+                        
+                        <span class="course-tag">Computer Networks</span>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section section-alt" id="contact">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Get In Touch</span>
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">Interested in discussing an opportunity, project collaboration, or interview? Reach out directly!</p>
+        </div>
+
+        <div class="contact-layout">
+            <!-- Contact Details Card -->
+            <div class="contact-info-card">
+                <h3 class="contact-card-title">Contact Information</h3>
+                <p class="contact-card-desc">Feel free to message me through this form, email me directly, or connect with me on LinkedIn.</p>
+
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <div class="contact-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:dnhp281999@gmail.com" class="contact-value" id="copy-email-link" title="Click to copy email">dnhp281999@gmail.com</a>
+                            <span class="copy-hint" id="copy-hint">Click to copy</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Phone</span>
+                            <a href="tel:+1 (416) 721-0524" class="contact-value">+1 (416) 721-0524</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">LinkedIn</span>
+                            <a href="https://linkedin.com/in/dev-n-patel-2aug1999/" target="_blank" rel="noopener" class="contact-value">dev-n-patel-2aug1999</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">GitHub</span>
+                            <a href="https://github.com/devpatel28" target="_blank" rel="noopener" class="contact-value">github.com/devpatel28</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recruiter Contact Form -->
+            <div class="contact-form-card">
+                <h3 class="contact-card-title">Send a Direct Message</h3>
+                <form method="POST" action="mailto:dnhp281999@gmail.com" class="resume-contact-form">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="iB1dlsQI5srM5yVNeJf4EE4aTOehwrF6QcA2lzUcAECiwaiGAtTYWmLoswB36LAz">
+                    <div class="form-group">
+                        <label for="id_name" class="form-label">Full Name</label>
+                        <input type="text" name="name" class="form-input" placeholder="Your Name" required maxlength="100" id="id_name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_email" class="form-label">Email Address</label>
+                        <input type="email" name="email" class="form-input" placeholder="Your Email Address (e.g. recruiter@company.com)" required maxlength="254" id="id_email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_subject" class="form-label">Subject</label>
+                        <input type="text" name="subject" class="form-input" placeholder="Subject (e.g. Interview Inquiry / Junior Developer Opportunity)" required maxlength="200" id="id_subject">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_message" class="form-label">Message</label>
+                        <textarea name="message" cols="40" rows="5" class="form-textarea" placeholder="Hi Dev, I came across your portfolio and would like to discuss..." required id="id_message">
+</textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p class="footer-title">Dev Nareshkumar Patel</p>
+                <p class="footer-sub">Junior Software Developer &bull; Ontario, Canada</p>
+            </div>
+            <div class="footer-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">WhiteNoise</span>
+            </div>
+            <div class="footer-right">
+                <p>&copy; 2026 Dev Nareshkumar Patel. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/devpatel28" target="_blank" rel="noopener">GitHub</a> &bull;
+                    <a href="https://linkedin.com/in/dev-n-patel-2aug1999/" target="_blank" rel="noopener">LinkedIn</a> &bull;
+                    <a href="/admin/" target="_blank">Django Admin</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="./static/resume/js/main.js"></script>
+</body>
+</html>
+

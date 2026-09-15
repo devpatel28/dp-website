@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: dev-patel-resume
+    runtime: python
+    buildCommand: "pip install -r requirements.txt && python manage.py migrate && python manage.py seed_data && python manage.py collectstatic --noinput"
+    startCommand: "gunicorn config.wsgi:application"
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: "3.12.0"

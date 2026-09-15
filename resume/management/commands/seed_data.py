@@ -186,3 +186,4 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS("Experience seeded."))
 
         self.stdout.write(self.style.SUCCESS("Successfully populated all of Dev Patel's resume data!"))
+

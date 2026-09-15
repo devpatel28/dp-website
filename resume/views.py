@@ -50,3 +50,4 @@ def resume_view(request):
     }
 
     return render(request, 'resume/index.html', context)
+

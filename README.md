@@ -93,3 +93,4 @@ git commit -m "Initial commit: Dev Patel Django resume website and Docker setup"
 2. Click the blue **"Publish Branch"** or **"Publish to GitHub"** button.
 3. Choose either **"Publish to GitHub public repository"** (recommended for recruiters to view your code) or **private**.
 4. VS Code will automatically create `https://github.com/devpatel28/dp-website` and push all your code!
+

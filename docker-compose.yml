@@ -10,3 +10,4 @@ services:
     environment:
       - DEBUG=1
       - DJANGO_SECRET_KEY=django-insecure-dev-patel-resume-portfolio-secret-key-change-in-prod
+

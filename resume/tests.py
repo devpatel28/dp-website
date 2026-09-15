@@ -56,3 +56,4 @@ class ResumeTests(TestCase):
         self.assertEqual(tech_list, ["Raspberry Pi", "Python"])
         bullets = self.project.get_bullet_list()
         self.assertEqual(len(bullets), 2)
+
