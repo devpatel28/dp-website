@@ -13,10 +13,79 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Main Style -->
-    <link rel="stylesheet" href="./static/resume/css/style.css">
+    <!-- Main Style (with cache buster) -->
+    <link rel="stylesheet" href="./static/resume/css/style.css?v=3">
     <!-- Print Style for Recruiters -->
-    <link rel="stylesheet" href="./static/resume/css/print.css" media="print">
+    <link rel="stylesheet" href="./static/resume/css/print.css?v=3" media="print">
+
+    <style>
+        /* Fallback / Instant Circular Cursor Pointer */
+        @media (pointer: fine) {
+            html, body, a, button, input, textarea, select, [role="button"], .btn, .project-card, .skill-tag {
+                cursor: none !important;
+            }
+
+            .custom-cursor-dot {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 6px;
+                height: 6px;
+                background-color: #06b6d4;
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 9999999;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 10px #06b6d4;
+                transition: opacity 0.2s ease;
+            }
+
+            .custom-cursor-follower {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 34px;
+                height: 34px;
+                border: 2px solid #06b6d4;
+                background-color: rgba(6, 182, 212, 0.08);
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 9999998;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 15px rgba(6, 182, 212, 0.25);
+                transition: width 0.25s cubic-bezier(0.2, 0.9, 0.3, 1),
+                            height 0.25s cubic-bezier(0.2, 0.9, 0.3, 1),
+                            background-color 0.2s ease,
+                            border-color 0.2s ease,
+                            box-shadow 0.2s ease,
+                            opacity 0.2s ease;
+            }
+
+            .custom-cursor-follower.is-hovering {
+                width: 54px;
+                height: 54px;
+                background-color: rgba(99, 102, 241, 0.18);
+                border-color: #6366f1;
+                box-shadow: 0 0 24px rgba(99, 102, 241, 0.5);
+            }
+
+            .custom-cursor-follower.is-clicking {
+                width: 22px;
+                height: 22px;
+                background-color: rgba(6, 182, 212, 0.4);
+                border-color: #ffffff;
+            }
+
+            .custom-cursor-follower.is-typing {
+                width: 4px;
+                height: 28px;
+                border-radius: 2px;
+                background-color: #06b6d4;
+                border: none;
+                box-shadow: 0 0 10px #06b6d4;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Fancy Circular Cursor Pointer -->
@@ -715,7 +784,7 @@
             <div class="contact-form-card">
                 <h3 class="contact-card-title">Send a Direct Message</h3>
                 <form method="POST" action="mailto:dnhp281999@gmail.com" class="resume-contact-form">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="vLPSFCDJigc3TUqIyDHxsbfQ5wcd7Il6bszQ3p8oiUGmajj3CPscCPjCNjNggSZd">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="TW8lFkTcBzgFjVsW5dU7jXcHhmSBNYHnXnaBerJqVsjMr9pKJEhZ4jXYeUT8EyJV">
                     <div class="form-group">
                         <label for="id_name" class="form-label">Full Name</label>
                         <input type="text" name="name" class="form-input" placeholder="Your Name" required maxlength="100" id="id_name">
@@ -778,7 +847,7 @@
     </footer>
 
     <!-- Main JavaScript -->
-    <script src="./static/resume/js/main.js"></script>
+    <script src="./static/resume/js/main.js?v=3"></script>
 </body>
 </html>
 

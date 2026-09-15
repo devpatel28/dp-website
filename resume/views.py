@@ -8,7 +8,10 @@ def resume_view(request):
     # Fetch or initialize default profile
     profile = Profile.objects.first()
     if not profile:
-        profile = Profile.objects.create()
+        profile = Profile.objects.create(full_name="Dev Patel")
+    elif profile.full_name != "Dev Patel":
+        profile.full_name = "Dev Patel"
+        profile.save()
 
     # Fetch categorized skills
     skills_web = Skill.objects.filter(category='web')
