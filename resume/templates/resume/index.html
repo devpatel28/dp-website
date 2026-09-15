@@ -400,8 +400,21 @@
                         </div>
                         <div class="contact-details">
                             <span class="contact-label">Email</span>
-                            <a href="mailto:{{ profile.email }}" class="contact-value" id="copy-email-link" title="Click to copy email">{{ profile.email }}</a>
-                            <span class="copy-hint" id="copy-hint">Click to copy</span>
+                            <div class="email-actions-wrapper">
+                                <a href="mailto:{{ profile.email }}" class="contact-value" id="direct-email-link" title="Click to open your email client">{{ profile.email }}</a>
+                                <button type="button" class="copy-pill-btn" id="btn-copy-email" title="Copy email address to clipboard">
+                                    <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    <span id="copy-text">Copy</span>
+                                </button>
+                            </div>
+                            <div class="email-alternatives">
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to={{ profile.email }}&su=Junior%20Software%20Developer%20Opportunity" target="_blank" rel="noopener" class="gmail-direct-link">
+                                    ✉️ Open directly in Gmail
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -427,7 +440,7 @@
                         </div>
                         <div class="contact-details">
                             <span class="contact-label">LinkedIn</span>
-                            <a href="{{ profile.linkedin_url }}" target="_blank" rel="noopener" class="contact-value">dev-n-patel-2aug1999</a>
+                            <a href="{{ profile.linkedin_url }}" target="_blank" rel="noopener" class="contact-value">linkedin.com/in/dev-n-patel-2aug1999</a>
                         </div>
                     </div>
 

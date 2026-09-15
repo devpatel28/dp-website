@@ -8,7 +8,7 @@ class ResumeTests(TestCase):
     def setUp(self):
         self.client = Client()
         self.profile = Profile.objects.create(
-            full_name="Dev Nareshkumar Patel",
+            full_name="Dev Patel",
             title="Junior Software Developer",
             email="dnhp281999@gmail.com",
             phone="+1 (416) 721-0524",
@@ -33,7 +33,7 @@ class ResumeTests(TestCase):
     def test_resume_view_status_code(self):
         response = self.client.get(reverse('resume:home'))
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "Dev Nareshkumar Patel")
+        self.assertContains(response, "Dev Patel")
         self.assertContains(response, "Motion Detector")
         self.assertContains(response, "Python")
 

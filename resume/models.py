@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Profile(models.Model):
-    full_name = models.CharField(max_length=120, default="Dev Nareshkumar Patel")
+    full_name = models.CharField(max_length=120, default="Dev Patel")
     title = models.CharField(max_length=150, default="Junior Software Developer")
     headline = models.CharField(
         max_length=255,

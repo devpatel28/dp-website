@@ -15,9 +15,7 @@ class Command(BaseCommand):
         base_dir = Path(settings.BASE_DIR)
         docs_dir = base_dir / "docs"
 
-        # Create or clean docs directory
-        if docs_dir.exists():
-            shutil.rmtree(docs_dir)
+        # Ensure docs directory exists
         docs_dir.mkdir(parents=True, exist_ok=True)
 
         # 1. Render index.html using Django client
@@ -30,12 +28,11 @@ class Command(BaseCommand):
         html_content = response.content.decode('utf-8')
 
         # Convert static paths to relative for GitHub Pages compatibility
-        # '/static/' -> './static/'
         html_content = html_content.replace('href="/static/', 'href="./static/')
         html_content = html_content.replace('src="/static/', 'src="./static/')
-        # Adjust links
         html_content = html_content.replace('href="/#', 'href="#')
         html_content = html_content.replace('action="/#contact"', 'action="mailto:dnhp281999@gmail.com"')
+        html_content = html_content.replace('Dev Nareshkumar Patel', 'Dev Patel')
 
         index_file = docs_dir / "index.html"
         with open(index_file, "w", encoding="utf-8") as f:
@@ -44,7 +41,7 @@ class Command(BaseCommand):
         # 2. Copy static files to docs/static
         static_src = base_dir / "resume" / "static" / "resume"
         static_dest = docs_dir / "static" / "resume"
-        shutil.copytree(static_src, static_dest)
+        shutil.copytree(static_src, static_dest, dirs_exist_ok=True)
 
         # 3. Add .nojekyll for GitHub Pages
         nojekyll_file = docs_dir / ".nojekyll"

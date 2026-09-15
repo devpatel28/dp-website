@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="{% static 'resume/css/print.css' %}" media="print">
 </head>
 <body>
+    <!-- Fancy Circular Cursor Pointer -->
+    <div class="custom-cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+    <div class="custom-cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
     <!-- Navigation Bar -->
     <header class="navbar-header" id="header">
         <div class="nav-container">
@@ -103,7 +107,7 @@
                 <span class="tech-tag">WhiteNoise</span>
             </div>
             <div class="footer-right">
-                <p>&copy; {% now "Y" %} Dev Nareshkumar Patel. All rights reserved.</p>
+                <p>&copy; {% now "Y" %} Dev Patel. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="{{ profile.github_url }}" target="_blank" rel="noopener">GitHub</a> &bull;
                     <a href="{{ profile.linkedin_url }}" target="_blank" rel="noopener">LinkedIn</a> &bull;

@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dev Nareshkumar Patel - Junior Software Developer Portfolio & Interactive Resume. Computer Science student, Python developer, IoT and full-stack engineer.">
-    <meta name="author" content="Dev Nareshkumar Patel">
-    <title>Dev Nareshkumar Patel | Junior Software Developer</title>
+    <meta name="description" content="Dev Patel - Junior Software Developer Portfolio & Interactive Resume. Computer Science student, Python developer, IoT and full-stack engineer.">
+    <meta name="author" content="Dev Patel">
+    <title>Dev Patel | Junior Software Developer</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="./static/resume/css/print.css" media="print">
 </head>
 <body>
+    <!-- Fancy Circular Cursor Pointer -->
+    <div class="custom-cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+    <div class="custom-cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
     <!-- Navigation Bar -->
     <header class="navbar-header" id="header">
         <div class="nav-container">
@@ -86,7 +90,7 @@
         </div>
 
         <h1 class="hero-title">
-            Hi, I'm <span class="gradient-text">Dev Nareshkumar Patel</span>
+            Hi, I'm <span class="gradient-text">Dev Patel</span>
         </h1>
         <h2 class="hero-subtitle">Junior Software Developer</h2>
         <p class="hero-headline">Computer Science student passionate about Python, full-stack web development, and IoT engineering.</p>
@@ -649,8 +653,21 @@
                         </div>
                         <div class="contact-details">
                             <span class="contact-label">Email</span>
-                            <a href="mailto:dnhp281999@gmail.com" class="contact-value" id="copy-email-link" title="Click to copy email">dnhp281999@gmail.com</a>
-                            <span class="copy-hint" id="copy-hint">Click to copy</span>
+                            <div class="email-actions-wrapper">
+                                <a href="mailto:dnhp281999@gmail.com" class="contact-value" id="direct-email-link" title="Click to open your email client">dnhp281999@gmail.com</a>
+                                <button type="button" class="copy-pill-btn" id="btn-copy-email" title="Copy email address to clipboard">
+                                    <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                    <span id="copy-text">Copy</span>
+                                </button>
+                            </div>
+                            <div class="email-alternatives">
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dnhp281999@gmail.com&su=Junior%20Software%20Developer%20Opportunity" target="_blank" rel="noopener" class="gmail-direct-link">
+                                    ✉️ Open directly in Gmail
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -676,7 +693,7 @@
                         </div>
                         <div class="contact-details">
                             <span class="contact-label">LinkedIn</span>
-                            <a href="https://linkedin.com/in/dev-n-patel-2aug1999/" target="_blank" rel="noopener" class="contact-value">dev-n-patel-2aug1999</a>
+                            <a href="https://linkedin.com/in/dev-n-patel-2aug1999/" target="_blank" rel="noopener" class="contact-value">linkedin.com/in/dev-n-patel-2aug1999</a>
                         </div>
                     </div>
 
@@ -698,7 +715,7 @@
             <div class="contact-form-card">
                 <h3 class="contact-card-title">Send a Direct Message</h3>
                 <form method="POST" action="mailto:dnhp281999@gmail.com" class="resume-contact-form">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="iB1dlsQI5srM5yVNeJf4EE4aTOehwrF6QcA2lzUcAECiwaiGAtTYWmLoswB36LAz">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="vLPSFCDJigc3TUqIyDHxsbfQ5wcd7Il6bszQ3p8oiUGmajj3CPscCPjCNjNggSZd">
                     <div class="form-group">
                         <label for="id_name" class="form-label">Full Name</label>
                         <input type="text" name="name" class="form-input" placeholder="Your Name" required maxlength="100" id="id_name">
@@ -739,7 +756,7 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-left">
-                <p class="footer-title">Dev Nareshkumar Patel</p>
+                <p class="footer-title">Dev Patel</p>
                 <p class="footer-sub">Junior Software Developer &bull; Ontario, Canada</p>
             </div>
             <div class="footer-tech">
@@ -750,7 +767,7 @@
                 <span class="tech-tag">WhiteNoise</span>
             </div>
             <div class="footer-right">
-                <p>&copy; 2026 Dev Nareshkumar Patel. All rights reserved.</p>
+                <p>&copy; 2026 Dev Patel. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="https://github.com/devpatel28" target="_blank" rel="noopener">GitHub</a> &bull;
                     <a href="https://linkedin.com/in/dev-n-patel-2aug1999/" target="_blank" rel="noopener">LinkedIn</a> &bull;

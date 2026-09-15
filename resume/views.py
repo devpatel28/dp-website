@@ -27,10 +27,32 @@ def resume_view(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()
+            contact_msg = form.save()
+            
+            # Send email notification to Dev Patel if mail settings are configured
+            try:
+                from django.core.mail import send_mail
+                subject = f"[Portfolio Contact] {contact_msg.subject} from {contact_msg.name}"
+                body = (
+                    f"New message received on your portfolio website:\n\n"
+                    f"Name: {contact_msg.name}\n"
+                    f"Email: {contact_msg.email}\n"
+                    f"Subject: {contact_msg.subject}\n\n"
+                    f"Message:\n{contact_msg.message}\n"
+                )
+                send_mail(
+                    subject,
+                    body,
+                    None,
+                    [profile.email],
+                    fail_silently=True,
+                )
+            except Exception:
+                pass
+
             messages.success(
                 request,
-                "Thank you! Your message has been sent successfully. Dev will get back to you shortly."
+                f"Thank you, {contact_msg.name}! Your message has been sent to Dev Patel ({profile.email}). Dev will respond shortly."
             )
             return redirect('/#contact')
         else:

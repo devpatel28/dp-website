@@ -3,7 +3,7 @@ from resume.models import Profile, Skill, Project, Experience, Education
 
 
 class Command(BaseCommand):
-    help = "Seeds database with Dev Nareshkumar Patel's exact resume data"
+    help = "Seeds database with Dev Patel's exact resume data"
 
     def handle(self, *args, **options):
         self.stdout.write(self.style.NOTICE("Seeding Dev Patel's resume data..."))
@@ -12,7 +12,7 @@ class Command(BaseCommand):
         profile, _ = Profile.objects.update_or_create(
             id=1,
             defaults={
-                'full_name': "Dev Nareshkumar Patel",
+                'full_name': "Dev Patel",
                 'title': "Junior Software Developer",
                 'headline': "Computer Science student passionate about Python, full-stack web development, and IoT engineering.",
                 'bio': (

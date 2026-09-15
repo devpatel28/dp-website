@@ -1,4 +1,4 @@
-# Dev Nareshkumar Patel - Portfolio & Resume Web Application
+# Dev Patel - Portfolio & Resume Web Application
 
 A full-stack, data-driven software developer portfolio and resume website engineered with **Python**, **Django**, and **Docker**.
 

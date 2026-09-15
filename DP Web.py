@@ -25,7 +25,7 @@ def open_browser():
 
 def main():
     print("=" * 60)
-    print("Dev Nareshkumar Patel - Resume & Portfolio Web Platform")
+    print("Dev Patel - Resume & Portfolio Web Platform")
     print("=" * 60)
 
     # Set Django settings module

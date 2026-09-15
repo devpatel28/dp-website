@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Dev Nareshkumar Patel - Print / PDF Resume Stylesheet
+   Dev Patel - Print / PDF Resume Stylesheet
    Optimized for 1-2 Page Clean Executive & Technical Formatting
    ========================================================================== */
 
@@ -42,7 +42,7 @@
         margin: 0 !important;
     }
 
-    /* Print Header (Dev Nareshkumar Patel) */
+    /* Print Header (Dev Patel) */
     .hero-section {
         padding: 0 0 10pt 0 !important;
         border-bottom: 1.5pt solid #000000 !important;
