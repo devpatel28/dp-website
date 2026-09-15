@@ -16,6 +16,12 @@ DEBUG = os.getenv('DEBUG', 'True').lower() in ('true', '1', 't')
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.onrender.com',
+    'http://127.0.0.1',
+    'http://localhost',
+]
+
 # Try importing whitenoise if installed
 try:
     import whitenoise

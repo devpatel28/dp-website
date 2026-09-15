@@ -54,3 +54,4 @@ class Command(BaseCommand):
             f"Successfully exported static site to {docs_dir}\n"
             f"Now you can commit the 'docs' folder and enable GitHub Pages in your repo settings!"
         ))
+
