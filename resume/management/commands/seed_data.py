@@ -111,10 +111,10 @@ class Command(BaseCommand):
                     "Built an importer for the OpenF1 timing API that loads six 2025 Grands Prix with request spacing, retries on rate limits and server errors, and a validated, all-or-nothing CSV import shared with the API path.\n"
                     "Implemented the pace analysis: clean-lap rules that exclude pit, safety-car, first and outlier laps; median and fastest pace; and automatic tyre-stint detection.\n"
                     "Drew lap charts, stint timelines and a fastest-lap replay with speed, throttle, brake and gear telemetry in dependency-free JavaScript and SVG.\n"
-                    "Added user accounts with CSRF-protected saved comparisons, a validated JSON API, 13 automated tests, CI against PostgreSQL in GitHub Actions, Docker Compose and one-click GitHub Codespaces."
+                    "Added user accounts with CSRF-protected saved comparisons, a validated JSON API, 14 automated tests, CI against PostgreSQL in GitHub Actions, Docker Compose, one-click GitHub Codespaces, and a read-only live demo published to GitHub Pages by a CI workflow."
                 ),
                 'github_url': "https://github.com/devpatel28/Pitwall",
-                'live_demo_url': "",
+                'live_demo_url': "https://devpatel28.github.io/Pitwall/",
                 'is_featured': True,
                 'order': 1,
             },
