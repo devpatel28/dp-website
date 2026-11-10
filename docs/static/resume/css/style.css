@@ -1304,3 +1304,8 @@ ul {
 .edu-top {
     flex-wrap: wrap;
 }
+
+/* About cards size to their content now that the stats block is gone */
+.about-grid {
+    align-items: start;
+}

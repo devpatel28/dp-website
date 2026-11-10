@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dev Patel - Junior Software Developer Portfolio & Interactive Resume. Computer Science student, Python developer, IoT and full-stack engineer.">
+    <meta name="description" content="Dev Patel - Junior Software Developer Portfolio & Interactive Resume. Computer Science graduate, Python developer, IoT and full-stack engineer.">
     <meta name="author" content="Dev Patel">
     <title>Dev Patel | Junior Software Developer</title>
     
@@ -109,14 +109,12 @@
             </nav>
 
             <div class="nav-actions">
-                <button class="btn btn-outline btn-sm print-btn" onclick="window.print()" title="Print or Save Resume as PDF">
+                <a class="btn btn-outline btn-sm print-btn" href="{% static 'resume/Dev_Patel_Resume.pdf' %}" download title="Download resume (PDF)">
                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 6 2 18 2 18 9"></polyline>
-                        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-                        <rect x="6" y="14" width="12" height="8"></rect>
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line>
                     </svg>
                     <span>PDF Resume</span>
-                </button>
+                </a>
 
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
                     <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

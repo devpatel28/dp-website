@@ -14,19 +14,19 @@ class Command(BaseCommand):
             defaults={
                 'full_name': "Dev Patel",
                 'title': "Junior Software Developer",
-                'headline': "Computer Science student passionate about Python, full-stack web development, and IoT engineering.",
+                'headline': "Computer Science graduate building with Python, full-stack web development and IoT engineering.",
                 'bio': (
-                    "Aspiring Junior Software Developer pursuing a Bachelor of Computer Science at Trent University "
-                    "with a technical foundation in Electronics Engineering from Seneca College. Proven hands-on experience "
+                    "Junior Software Developer with a Bachelor of Computer Science from Trent University (2026) "
+                    "and a technical foundation in Electronics Engineering from Seneca College. Hands-on experience "
                     "in software deployment, IoT automation, and real-time web applications using Python, Django, React, and Docker. "
                     "Driven by solving practical engineering problems and shipping clean, maintainable code."
                 ),
-                'phone': "+1 (416) 721-0524",
+                'phone': "",
                 'email': "dnhp281999@gmail.com",
                 'location': "Ontario, Canada",
                 'linkedin_url': "https://linkedin.com/in/dev-n-patel-2aug1999/",
                 'github_url': "https://github.com/devpatel28",
-                'status_text': "Open to Junior Software Developer & Co-op Roles",
+                'status_text': "Open to Junior Software Developer Roles",
             }
         )
         self.stdout.write(self.style.SUCCESS(f"Profile updated: {profile.full_name}"))
@@ -82,13 +82,11 @@ class Command(BaseCommand):
             # Tools & DevOps
             ('Git & GitHub', 'devops', 92, 1),
             ('Docker', 'devops', 85, 2),
-            ('Google Colab', 'devops', 88, 3),
             ('Linux / Bash', 'devops', 82, 4),
-            ('VS Code', 'devops', 95, 5),
 
             # Certifications
-            ('Complete Python Mastery (Code With Mosh)', 'cert', 100, 1),
-            ('Intro to Generative AI', 'cert', 100, 2),
+            ('Complete Python Mastery (Code with Mosh)', 'cert', 100, 1),
+            ('Introduction to Generative AI (Google Cloud)', 'cert', 100, 2),
         ]
         for name, category, proficiency, order in skills:
             Skill.objects.create(
