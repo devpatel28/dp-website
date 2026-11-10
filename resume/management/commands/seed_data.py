@@ -103,47 +103,65 @@ class Command(BaseCommand):
         Project.objects.all().delete()
         projects = [
             {
-                'title': "Motion Detector",
-                'tagline': "Real-time IoT alert appliance using Raspberry Pi and LTE telemetry",
-                'technologies': "Raspberry Pi, Python, PIR sensor, SMTP, TRM240 LTE",
-                'description': "An embedded IoT security application that detects movement in real time and automatically dispatches alert notifications over cellular network without relying on local Wi-Fi.",
+                'title': "Pitwall: F1 Race Strategy Explorer",
+                'tagline': "Django web app for comparing lap pace and tyre strategy with real 2025 Formula 1 data",
+                'technologies': "Python, Django, PostgreSQL, JavaScript, SVG, Docker, GitHub Actions, OpenF1 API",
+                'description': "A full-stack race analysis tool that compares two drivers side by side across six 2025 Grands Prix, with lap-by-lap pace charts, tyre-stint timelines and a fastest-lap replay drawn on the real circuit.",
                 'bullet_points': (
-                    "Developed a Python-based event listener to process PIR sensor interrupts and integrated SMTP libraries for automated alert dispatching within 5 minutes of detection.\n"
-                    "Connected the Raspberry Pi to the internet using a TRM240 LTE modem to establish an independent network connection, ensuring continuous real-time environment monitoring."
+                    "Built an importer for the OpenF1 timing API that loads six 2025 Grands Prix with request spacing, retries on rate limits and server errors, and a validated, all-or-nothing CSV import shared with the API path.\n"
+                    "Implemented the pace analysis: clean-lap rules that exclude pit, safety-car, first and outlier laps; median and fastest pace; and automatic tyre-stint detection.\n"
+                    "Drew lap charts, stint timelines and a fastest-lap replay with speed, throttle, brake and gear telemetry in dependency-free JavaScript and SVG.\n"
+                    "Added user accounts with CSRF-protected saved comparisons, a validated JSON API, 13 automated tests, CI against PostgreSQL in GitHub Actions, Docker Compose and one-click GitHub Codespaces."
                 ),
-                'github_url': "https://github.com/devpatel28",
+                'github_url': "https://github.com/devpatel28/Pitwall",
                 'live_demo_url': "",
                 'is_featured': True,
                 'order': 1,
             },
             {
-                'title': "Temperature-Controlled Home Automation",
-                'tagline': "Full-stack smart climate control with real-time multi-user WebSocket sync",
-                'technologies': "Arduino, React.js, Node.js, WebSockets, Digital Thermometer",
-                'description': "A smart home automation prototype featuring an Arduino hardware controller and a responsive mobile web interface with synchronized real-time sensor streaming.",
+                'title': "Motion Detector (Motion Guard)",
+                'tagline': "Real-time IoT alert appliance using Raspberry Pi and LTE telemetry",
+                'technologies': "Raspberry Pi, Python, PIR sensor, SQLite, SMTP, TRM240 LTE",
+                'description': "An embedded IoT security application that detects movement in real time and sends alert notifications over a cellular network without relying on local Wi-Fi.",
                 'bullet_points': (
-                    "Architected an Arduino-based system with a React.js/Node.js mobile interface, implementing a real-time data pipeline to synchronize temperature states across multiple concurrent users via WebSocket.\n"
-                    "Engineered automated control logic to process ambient data from a digital thermometer, bypassing manual inputs to maintain precise climate conditions."
+                    "Developed a Python-based event listener to process PIR sensor interrupts and integrated SMTP libraries for automated alert dispatching within 5 minutes of detection.\n"
+                    "Connected the Raspberry Pi to the internet using a TRM240 LTE modem to establish an independent network connection, ensuring continuous real-time environment monitoring.\n"
+                    "Rebuilt the software as the open-source Motion Guard: SQLite event history, alert cooldowns, a durable email outbox with exponential-backoff retries, and a hardware-free simulator covered by unit tests."
                 ),
-                'github_url': "https://github.com/devpatel28",
+                'github_url': "https://github.com/devpatel28/motion-guard",
                 'live_demo_url': "",
                 'is_featured': True,
                 'order': 2,
             },
             {
-                'title': "Developer Resume & Portfolio Web Platform",
-                'tagline': "Dynamic, containerized full-stack web application built with Django & Docker",
-                'technologies': "Python, Django, Docker, PostgreSQL/SQLite, HTML5, CSS3, JavaScript",
-                'description': "A professional developer portfolio and interactive resume platform engineered with Django MVC architecture, featuring database-driven content management, contact processing, and Docker containerization.",
+                'title': "Temperature-Controlled Home Automation (Climate Control)",
+                'tagline': "Full-stack smart climate control with real-time multi-user WebSocket sync",
+                'technologies': "Arduino, React.js, Node.js, WebSockets, DS18B20 sensor",
+                'description': "A smart home automation prototype featuring an Arduino hardware controller and a responsive web interface with real-time sensor streaming synchronized across users.",
                 'bullet_points': (
-                    "Engineered relational database models for skills, projects, and work history, manageable directly through an authenticated Django Admin panel.\n"
-                    "Designed a responsive, modern frontend featuring dark/light theme persistence, recruiter-friendly print/PDF export, and CSRF-protected contact forms.\n"
-                    "Containerized the application with Docker and Docker Compose for production-grade reliability and reproducible developer setup."
+                    "Architected an Arduino-based system with a React.js/Node.js mobile interface, implementing a real-time data pipeline to synchronize temperature states across multiple concurrent users via WebSocket.\n"
+                    "Engineered automated control logic to process ambient data from a digital thermometer, bypassing manual inputs to maintain precise climate conditions.\n"
+                    "Rebuilt the software as the open-source Climate Control: a hysteresis controller with a \u00b10.5 \u00b0C deadband, fail-safe shutoff on stale or invalid readings, an Arduino watchdog, a deterministic simulator, and tests plus firmware compilation in GitHub Actions."
                 ),
-                'github_url': "https://github.com/devpatel28",
+                'github_url': "https://github.com/devpatel28/climate-control",
                 'live_demo_url': "",
                 'is_featured': True,
                 'order': 3,
+            },
+            {
+                'title': "Developer Resume & Portfolio Web Platform",
+                'tagline': "This website: a Django and Docker application published as a static site on GitHub Pages",
+                'technologies': "Python, Django, Docker, PostgreSQL/SQLite, HTML5, CSS3, JavaScript",
+                'description': "A developer portfolio and interactive resume built on Django, with database-driven content managed through the admin panel and a static export for free hosting.",
+                'bullet_points': (
+                    "Designed relational models for skills, projects, experience and education, editable through an authenticated Django Admin panel.\n"
+                    "Built a responsive frontend with dark/light theme persistence and a print stylesheet that produces a clean PDF resume.\n"
+                    "Wrote a management command that renders the site to static HTML for GitHub Pages, and containerized the Django app with Docker Compose."
+                ),
+                'github_url': "https://github.com/devpatel28/dp-website",
+                'live_demo_url': "https://devpatel28.github.io/dp-website/",
+                'is_featured': True,
+                'order': 4,
             },
         ]
         for proj in projects:

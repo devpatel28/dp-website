@@ -406,7 +406,7 @@
         <div class="section-header">
             <span class="section-tag">Featured Work</span>
             <h2 class="section-title">Projects</h2>
-            <p class="section-subtitle">Real-world applications spanning embedded IoT telemetry, full-stack microservices, and containerized web systems.</p>
+            <p class="section-subtitle">Applications spanning sports data analysis, embedded IoT, real-time web systems and containerized deployment.</p>
         </div>
 
         <div class="projects-grid">
@@ -414,41 +414,51 @@
             <article class="project-card">
                 <div class="project-card-header">
                     <span class="project-number">01</span>
-                    <h3 class="project-title">Motion Detector</h3>
+                    <h3 class="project-title">Pitwall: F1 Race Strategy Explorer</h3>
                     
-                    <p class="project-tagline">Real-time IoT alert appliance using Raspberry Pi and LTE telemetry</p>
+                    <p class="project-tagline">Django web app for comparing lap pace and tyre strategy with real 2025 Formula 1 data</p>
                     
                 </div>
 
                 <div class="project-tech-list">
                     
-                    <span class="badge badge-tech">Raspberry Pi</span>
-                    
                     <span class="badge badge-tech">Python</span>
                     
-                    <span class="badge badge-tech">PIR sensor</span>
+                    <span class="badge badge-tech">Django</span>
                     
-                    <span class="badge badge-tech">SMTP</span>
+                    <span class="badge badge-tech">PostgreSQL</span>
                     
-                    <span class="badge badge-tech">TRM240 LTE</span>
+                    <span class="badge badge-tech">JavaScript</span>
+                    
+                    <span class="badge badge-tech">SVG</span>
+                    
+                    <span class="badge badge-tech">Docker</span>
+                    
+                    <span class="badge badge-tech">GitHub Actions</span>
+                    
+                    <span class="badge badge-tech">OpenF1 API</span>
                     
                 </div>
 
-                <p class="project-description">An embedded IoT security application that detects movement in real time and automatically dispatches alert notifications over cellular network without relying on local Wi-Fi.</p>
+                <p class="project-description">A full-stack race analysis tool that compares two drivers side by side across six 2025 Grands Prix, with lap-by-lap pace charts, tyre-stint timelines and a fastest-lap replay drawn on the real circuit.</p>
 
                 <div class="project-bullets">
                     <ul>
                         
-                        <li>Developed a Python-based event listener to process PIR sensor interrupts and integrated SMTP libraries for automated alert dispatching within 5 minutes of detection.</li>
+                        <li>Built an importer for the OpenF1 timing API that loads six 2025 Grands Prix with request spacing, retries on rate limits and server errors, and a validated, all-or-nothing CSV import shared with the API path.</li>
                         
-                        <li>Connected the Raspberry Pi to the internet using a TRM240 LTE modem to establish an independent network connection, ensuring continuous real-time environment monitoring.</li>
+                        <li>Implemented the pace analysis: clean-lap rules that exclude pit, safety-car, first and outlier laps; median and fastest pace; and automatic tyre-stint detection.</li>
+                        
+                        <li>Drew lap charts, stint timelines and a fastest-lap replay with speed, throttle, brake and gear telemetry in dependency-free JavaScript and SVG.</li>
+                        
+                        <li>Added user accounts with CSRF-protected saved comparisons, a validated JSON API, 13 automated tests, CI against PostgreSQL in GitHub Actions, Docker Compose and one-click GitHub Codespaces.</li>
                         
                     </ul>
                 </div>
 
                 <div class="project-card-footer">
                     
-                    <a href="https://github.com/devpatel28" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                    <a href="https://github.com/devpatel28/Pitwall" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                         </svg>
@@ -462,7 +472,59 @@
             <article class="project-card">
                 <div class="project-card-header">
                     <span class="project-number">02</span>
-                    <h3 class="project-title">Temperature-Controlled Home Automation</h3>
+                    <h3 class="project-title">Motion Detector (Motion Guard)</h3>
+                    
+                    <p class="project-tagline">Real-time IoT alert appliance using Raspberry Pi and LTE telemetry</p>
+                    
+                </div>
+
+                <div class="project-tech-list">
+                    
+                    <span class="badge badge-tech">Raspberry Pi</span>
+                    
+                    <span class="badge badge-tech">Python</span>
+                    
+                    <span class="badge badge-tech">PIR sensor</span>
+                    
+                    <span class="badge badge-tech">SQLite</span>
+                    
+                    <span class="badge badge-tech">SMTP</span>
+                    
+                    <span class="badge badge-tech">TRM240 LTE</span>
+                    
+                </div>
+
+                <p class="project-description">An embedded IoT security application that detects movement in real time and sends alert notifications over a cellular network without relying on local Wi-Fi.</p>
+
+                <div class="project-bullets">
+                    <ul>
+                        
+                        <li>Developed a Python-based event listener to process PIR sensor interrupts and integrated SMTP libraries for automated alert dispatching within 5 minutes of detection.</li>
+                        
+                        <li>Connected the Raspberry Pi to the internet using a TRM240 LTE modem to establish an independent network connection, ensuring continuous real-time environment monitoring.</li>
+                        
+                        <li>Rebuilt the software as the open-source Motion Guard: SQLite event history, alert cooldowns, a durable email outbox with exponential-backoff retries, and a hardware-free simulator covered by unit tests.</li>
+                        
+                    </ul>
+                </div>
+
+                <div class="project-card-footer">
+                    
+                    <a href="https://github.com/devpatel28/motion-guard" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        Source Code
+                    </a>
+                    
+                    
+                </div>
+            </article>
+            
+            <article class="project-card">
+                <div class="project-card-header">
+                    <span class="project-number">03</span>
+                    <h3 class="project-title">Temperature-Controlled Home Automation (Climate Control)</h3>
                     
                     <p class="project-tagline">Full-stack smart climate control with real-time multi-user WebSocket sync</p>
                     
@@ -478,11 +540,11 @@
                     
                     <span class="badge badge-tech">WebSockets</span>
                     
-                    <span class="badge badge-tech">Digital Thermometer</span>
+                    <span class="badge badge-tech">DS18B20 sensor</span>
                     
                 </div>
 
-                <p class="project-description">A smart home automation prototype featuring an Arduino hardware controller and a responsive mobile web interface with synchronized real-time sensor streaming.</p>
+                <p class="project-description">A smart home automation prototype featuring an Arduino hardware controller and a responsive web interface with real-time sensor streaming synchronized across users.</p>
 
                 <div class="project-bullets">
                     <ul>
@@ -491,12 +553,14 @@
                         
                         <li>Engineered automated control logic to process ambient data from a digital thermometer, bypassing manual inputs to maintain precise climate conditions.</li>
                         
+                        <li>Rebuilt the software as the open-source Climate Control: a hysteresis controller with a ±0.5 °C deadband, fail-safe shutoff on stale or invalid readings, an Arduino watchdog, a deterministic simulator, and tests plus firmware compilation in GitHub Actions.</li>
+                        
                     </ul>
                 </div>
 
                 <div class="project-card-footer">
                     
-                    <a href="https://github.com/devpatel28" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                    <a href="https://github.com/devpatel28/climate-control" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                         </svg>
@@ -509,10 +573,10 @@
             
             <article class="project-card">
                 <div class="project-card-header">
-                    <span class="project-number">03</span>
+                    <span class="project-number">04</span>
                     <h3 class="project-title">Developer Resume &amp; Portfolio Web Platform</h3>
                     
-                    <p class="project-tagline">Dynamic, containerized full-stack web application built with Django &amp; Docker</p>
+                    <p class="project-tagline">This website: a Django and Docker application published as a static site on GitHub Pages</p>
                     
                 </div>
 
@@ -534,29 +598,38 @@
                     
                 </div>
 
-                <p class="project-description">A professional developer portfolio and interactive resume platform engineered with Django MVC architecture, featuring database-driven content management, contact processing, and Docker containerization.</p>
+                <p class="project-description">A developer portfolio and interactive resume built on Django, with database-driven content managed through the admin panel and a static export for free hosting.</p>
 
                 <div class="project-bullets">
                     <ul>
                         
-                        <li>Engineered relational database models for skills, projects, and work history, manageable directly through an authenticated Django Admin panel.</li>
+                        <li>Designed relational models for skills, projects, experience and education, editable through an authenticated Django Admin panel.</li>
                         
-                        <li>Designed a responsive, modern frontend featuring dark/light theme persistence, recruiter-friendly print/PDF export, and CSRF-protected contact forms.</li>
+                        <li>Built a responsive frontend with dark/light theme persistence and a print stylesheet that produces a clean PDF resume.</li>
                         
-                        <li>Containerized the application with Docker and Docker Compose for production-grade reliability and reproducible developer setup.</li>
+                        <li>Wrote a management command that renders the site to static HTML for GitHub Pages, and containerized the Django app with Docker Compose.</li>
                         
                     </ul>
                 </div>
 
                 <div class="project-card-footer">
                     
-                    <a href="https://github.com/devpatel28" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                    <a href="https://github.com/devpatel28/dp-website" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                         </svg>
                         Source Code
                     </a>
                     
+                    
+                    <a href="https://devpatel28.github.io/dp-website/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        Live Demo
+                    </a>
                     
                 </div>
             </article>
@@ -783,8 +856,7 @@
             <!-- Recruiter Contact Form -->
             <div class="contact-form-card">
                 <h3 class="contact-card-title">Send a Direct Message</h3>
-                <form method="POST" action="mailto:dnhp281999@gmail.com" class="resume-contact-form">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="TW8lFkTcBzgFjVsW5dU7jXcHhmSBNYHnXnaBerJqVsjMr9pKJEhZ4jXYeUT8EyJV">
+                <form method="POST" action="https://formsubmit.co/dnhp281999@gmail.com" class="resume-contact-form">
                     <div class="form-group">
                         <label for="id_name" class="form-label">Full Name</label>
                         <input type="text" name="name" class="form-input" placeholder="Your Name" required maxlength="100" id="id_name">

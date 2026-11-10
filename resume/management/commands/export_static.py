@@ -1,4 +1,5 @@
 import os
+import re
 import shutil
 from pathlib import Path
 from django.core.management.base import BaseCommand
@@ -31,7 +32,14 @@ class Command(BaseCommand):
         html_content = html_content.replace('href="/static/', 'href="./static/')
         html_content = html_content.replace('src="/static/', 'src="./static/')
         html_content = html_content.replace('href="/#', 'href="#')
-        html_content = html_content.replace('action="/#contact"', 'action="mailto:dnhp281999@gmail.com"')
+        # GitHub Pages cannot run Django, so the static contact form posts to FormSubmit,
+        # which forwards messages by email. main.js submits it in the background and
+        # shows the result; without JavaScript it still works as a normal form POST.
+        html_content = html_content.replace(
+            'action="/#contact"',
+            'action="https://formsubmit.co/dnhp281999@gmail.com"',
+        )
+        html_content = re.sub(r'\s*<input type="hidden" name="csrfmiddlewaretoken" value="[^"]*">', '', html_content)
         html_content = html_content.replace('Dev Nareshkumar Patel', 'Dev Patel')
 
         index_file = docs_dir / "index.html"
