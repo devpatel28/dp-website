@@ -1288,3 +1288,19 @@ ul {
     }
 }
 
+
+/* Contact form status (static site) */
+.form-status {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    min-height: 1.4em;
+}
+.form-status-pending { opacity: 0.8; }
+.form-status-success { color: #16a34a; }
+.form-status-error { color: #dc2626; }
+
+/* Let date badges drop below the title on narrow screens instead of overflowing */
+.timeline-meta,
+.edu-top {
+    flex-wrap: wrap;
+}

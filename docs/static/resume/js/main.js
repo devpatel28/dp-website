@@ -201,37 +201,61 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --------------------------------------------------------
-    // 6. Contact Form Real-Time Email Delivery Forwarding
+    // 6. Contact Form
+    // On the Django site the form posts to the server as usual.
+    // On the static GitHub Pages copy (form action points to FormSubmit),
+    // send the message in the background and show the result in place.
     // --------------------------------------------------------
     const contactForm = document.querySelector('.resume-contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            const nameInput = contactForm.querySelector('[name="name"]');
-            const emailInput = contactForm.querySelector('[name="email"]');
-            const subjectInput = contactForm.querySelector('[name="subject"]');
-            const messageInput = contactForm.querySelector('[name="message"]');
+    if (contactForm && contactForm.action.indexOf('formsubmit.co/') !== -1) {
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const statusLine = document.createElement('p');
+        statusLine.className = 'form-status';
+        statusLine.setAttribute('role', 'status');
+        statusLine.setAttribute('aria-live', 'polite');
+        contactForm.appendChild(statusLine);
 
-            if (nameInput && emailInput && messageInput) {
-                // Send an async forward copy to FormSubmit so Dev receives email instantly in Gmail
-                try {
-                    fetch('https://formsubmit.co/ajax/dnhp281999@gmail.com', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            name: nameInput.value,
-                            email: emailInput.value,
-                            _subject: `Portfolio Message from ${nameInput.value}: ${subjectInput ? subjectInput.value : 'Inquiry'}`,
-                            message: messageInput.value
-                        })
-                    }).catch(() => {
-                        // Silent failover to standard Django form submission
-                    });
-                } catch (err) {
-                    // Fallback to standard Django POST
+        const showStatus = (text, kind) => {
+            statusLine.textContent = text;
+            statusLine.className = 'form-status form-status-' + kind;
+        };
+
+        contactForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            if (!contactForm.reportValidity()) return;
+
+            const field = (name) => {
+                const input = contactForm.querySelector('[name="' + name + '"]');
+                return input ? input.value.trim() : '';
+            };
+            const name = field('name');
+            const subject = field('subject') || 'Inquiry';
+
+            submitButton.disabled = true;
+            showStatus('Sending your message\u2026', 'pending');
+            try {
+                const response = await fetch(contactForm.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({
+                        name: name,
+                        email: field('email'),
+                        message: field('message'),
+                        _subject: 'Portfolio message from ' + name + ': ' + subject,
+                        _template: 'table',
+                        _captcha: 'false'
+                    })
+                });
+                const result = await response.json().catch(() => ({}));
+                if (!response.ok || String(result.success) === 'false') {
+                    throw new Error(result.message || 'Request failed');
                 }
+                contactForm.reset();
+                showStatus('Thank you, ' + name + '! Your message was sent. Dev will reply by email.', 'success');
+            } catch (err) {
+                showStatus('Sorry, the message could not be sent. Please email me directly using the address on this page.', 'error');
+            } finally {
+                submitButton.disabled = false;
             }
         });
     }
